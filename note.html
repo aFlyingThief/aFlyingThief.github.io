@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .main{
+            width:80%;
+            margin:auto;
+          
+        }
+        h2 span{
+            display:inline-block;
+            color:brown;
+            font-size:1em;
+            border:solid 1px;
+            height:20px;
+            width:20px;
+            text-align: center;
+            line-height:20px;
+            border-radius:50%;
+        }
+        .title{
+          font-size: 1em;
+        }
+        .alert{
+            background:yellow;
+            font-size:1em;
+        }
+        .example{
+          display:inline;
+          text-decoration:none;
+          font-size:0.5em;
+        }
+    </style>
+    <body>
+        <div class="main">
+                <h1>ES6值得关注的重要特性<a class="example" href="http://jsrun.net/tutorial/kgKKp">书写规范</a></h1>
+                <h2 class="title"><span>1</span>let const 代替 var</h2>
+                <h2 class="title"><span>2</span>变量的解构赋值</h2>
+                <p>数组的解构赋值和对象的解构赋值这是最核心的两个，然后解构赋值的规则是
+                只要等号右边的值不是数组或对象就先将其转换成对象。函数参数也可以解构</p>
+                <h2 class="title"><span>3</span>对象的新特性很有趣简化了写法</h2>
+                <p>属性和方法都可以简写</p>
+                <h2 class="title"><span>4</span>数组的扩展</h2>
+                <p>...扩展运算符好用到没朋友有没有？</p>
+                <p>Array.from方法用于将两类对象转为真正的数组：类似数组的对象（array-like object）和可遍历（iterable）的对象（包括 ES6 新增的数据结构 Set 和 Map）。
+                  Array.from还可以接受第二个参数，作用类似于数组的map方法，用来对每个元素进行处理，将处理后的值放入返回的数组。<span class="alert">
+                    其实完全可以用...代替
+                  </span>
+                </p>
+                <h2 class="title"><span>5</span>函数的扩展</h2>
+                <p>说实话我第一次遇见函数还可以设置默认参数。...三点参数
+                很酷有没有。箭头函数更酷有没有。如果想要返回一个对象时需要用()括起来。<span class="alert">
+                需要注意的是函数体内的this对象就是定义时所在的函数而不是使用时所在的对象(箭头函数没有自己的this)。不可以当做构造函数，不可以
+                使用arguments</span></p>
+                <p>还要总结一下函数，js中函数是Function的实例。所以函数也有属性和方法。函数的两个特殊对象arguments和this,两个属性prototype和length，三个方法
+                  apply()，call()，bind()。
+                </p>
+                <h2 class="title"><span>6</span>对象的扩展</h2> 
+                <p>属性，方法的简洁表示法。（以后都这么写）</p>
+                <p>新增Object.is()只要两个值一样就相等 Object.assign(target, source1, source2)将两个对象合并</p>
+                <h2 class="title"><span>7</span>Set和Map结构</h2>
+                <p>Set 函数可以接受一个数组（或类似数组的对象）作为参数，用来初始化。</p>
+                <p>Set.prototype.constructor：构造函数，默认就是Set函数。Set.prototype.size：返回Set实例的成员总数。
+                  实例方法有add(),delete(),has(),clear()。
+                </p>
+                <P>WeakSet成员只能是对象。WeakSet.prototype.add(value)：向WeakSet实例添加一个新成员。
+                  WeakSet.prototype.delete(value)：清除WeakSet实例的指定成员。WeakSet.prototype.has(value)：返回一个布尔值，表示某个值是否在WeakSet实例之中。</P>
+                <p>Map它类似于对象，也是键值对的集合，但是“键”的范围不限于字符串，各种类型的值（包括对象）都可以当作键。</p>
+                <p>size属性set(),get(),has(),delete(),clear()方法</p>
+                <h2 class="title"><span>8</span>Iterator和for...of一家亲</h2>
+                <p>在ES6中，有三类数据结构原生具备Iterator接口：数组、某些类似数组的对象、Set和Map结构。</p>
+                <h2 class="title"><span>9</span>Symbol</h2>
+                <p>ES的第7种数据类型</p>
+                <h2 class="title"><span>10</span>Promise</h2>
+                <h2 class="title"><span>11</span>asyn</h2>
+                <h2 class="title"><span>12</span>Class</h2>
+                <h2 class="title"><span>13</span>Module</h2>
+                <p>有Iterator接口都有keys(),values(),entries()。除了String</p>
+              
+        </div>
+        <script src="./demo.js"></script>
+    </body> 
+</html>
