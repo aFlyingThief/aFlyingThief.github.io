@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>给你小心心</title>
+    <link rel="icon" type="image/x-icon" href="./icon/love.png" />
+    
+    <style>
+        body{
+            padding:0;
+            margin:0;
+            background:url(./icon/flow.jpg);
+            background-size:100%;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-repeat:no-repeat;
+            background-attachment:fixed
+        }
+        img{
+            width:50px;
+            height:45px;
+            border:none;
+            display:none;
+        }
+        ul{
+            width:550px;
+            height:405px;
+            list-style-type: none;
+            margin:auto;
+            margin-top:100px;
+        }
+        li{
+            float:left;
+            width:50px;
+            height:45px;
+        }
+        .love{
+            width:60%;
+            float:left;
+        }
+        .express{
+            width:40%;
+            float:left;
+        }
+        .items{
+            width:80%;
+            height:100px;
+            line-height: 100px;
+            margin:auto;
+            margin-top:30px;
+            border-radius:20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.726);
+            color:white;
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div class="love">
+        
+    </div>
+    <div class="express">
+            
+    </div>
+        <script>
+                const arr=[3,4,8,9,13,14,15,16,18,19,20,21,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,46,47,48,49,50,51,52,53,54,58,59,60,61,62,63,64,70,71,72,73,74,82,83,84,94];
+                const ul=document.createElement("ul");
+                const express=document.getElementsByClassName('express')[0];
+                const content=['爱就像蓝天白云晴空万里忽然暴风雨','七夕快乐呀 么么哒','我想就这样牵着你的手不放开','少扣手！！！','再点小心心就没啦'];
+                for(let i=1;i<100;i++){
+                    const li=document.createElement("li");
+                    const img=document.createElement("img");
+                    li.appendChild(img);
+                    ul.appendChild(li);
+                }
+                document.querySelector('.love').appendChild(ul);
+                const imga=document.querySelectorAll('img');
+                let node=[...imga];
+                const love=[];
+                for(let a=0;a<99;a++){ 
+                    for(let i in node){
+                        if(i==arr[a]-1){
+                            node[i].src='./icon/lovee.png';
+                            love.push(node[i]);
+                            break;
+                        }
+                    }
+                } 
+                function timeout(ms) {
+                return new Promise((resolve) => {
+                    setTimeout(resolve,ms);
+                });
+                }
+                async function asyncPrint(ms) {
+                for(let i=0;i<love.length;i++){
+                    await timeout(ms);
+                    love[i].style.display="block"
+                }
+                }
+                asyncPrint(100);
+                love.forEach(
+                    (item)=>{
+                        item.addEventListener('click',function(){
+                            item.style.display='none';
+                            const aaa=document.createElement('div');
+                            aaa.className='items';
+                            aaa.innerHTML=content.shift();
+                            express.appendChild(aaa);
+                        })
+                    }
+                )
+        </script>
+</body>
+</html>

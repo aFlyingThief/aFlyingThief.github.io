@@ -11,14 +11,19 @@
       }
       #room{
         position:relative;
+        
       }
       #navigation{
-        margin:0;
+        background: white;
         list-style-type: none;
         height:80px;
         text-align: center;
         line-height: 80px;
-        box-shadow:0 0 3px rgb(146, 146, 146);
+        border-radius: 10px;
+        width:90%;
+        margin: 20px auto;
+        box-shadow: 0 0 10px 10px  rgb(235, 235, 235);
+        
       }
       #navigation li{
         display: inline-block;
@@ -31,7 +36,7 @@
         color:rgb(50, 50, 50);
       }
       #navigation a:hover{
-        border-bottom:rgb(0, 160, 60) solid 3px;
+        border-bottom:orangered solid 3px;
       }
       #find{
         border:solid 1px rgb(192, 192, 192);
@@ -81,20 +86,18 @@
   </head>
   <body>
       <div id="room">
-        <a href="https://mp.weixin.qq.com/s/MBM4S4L4M4FnpiKPwP4P2w" id="entry" title="非常棒的前端发展简史">前端发展简史</a>
+        <!-- <a href="https://mp.weixin.qq.com/s/MBM4S4L4M4FnpiKPwP4P2w" id="entry" title="非常棒的前端发展简史">前端发展简史</a> -->
         <ul id="navigation">
-          <li><a href="./es6.html">ES6</a></li>
-          <li><a href="./form.html">git</a></li>
-          <li><a href="./webpack.html">webpack</a></li>
-          <li><a href="./form.html">layout</a></li>
-          <li><a href="./form.html">fetch/ajax</a></li>
-          <li><a>plan</a></li>
-          <li><a href="http://www.woshipm.com/">人人都是产品经理</a></li>
+          <li><a href="./es6.html">前端技术</a></li>
+          <li><a href="https://www.uisdc.com/">优设网</a></li>
+          <li><a href=".http://www.woshipm.com/">人人都是产品经理</a></li>
+          <li><a href="./form.html">想法</a></li>
+          <li><a >计划</a></li>
         </ul>
         <div id="plan">
            <p>改造小米音乐，做一款纯粹的契合米粉的音乐软件</p>
         </div>
-        <div class="center">
+        <!-- <div class="center">
           <h1>不想做产品经理的前端不是好设计师</h1>
           <h2>我目前认知的前端体系</h2>
           <p><span>HTML</span>语义化能很容易的读懂</p>
@@ -105,13 +108,13 @@
           <p><span>webpack</span>是一个模块打包器，可以配置项让前端开发更容易。</p>
           <p><span>vue</span>代表的是目前前端的先进模式MVVM模式,只关心数据层，不再直接操作dom。</p>
           <p></p>
-        </div>
+        </div> -->
       </div>
       <script>
         let plan=document.getElementById('plan');
         let li=document.querySelectorAll('li');
         let i=0;
-        li[5].addEventListener('click',function(){
+        li[4].addEventListener('click',function(){
           if(i==0){
             plan.style.display='block';
             i=1;
