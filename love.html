@@ -11,9 +11,9 @@
             margin:0;
             background:url(./icon/flow.jpg);
             background-size:100%;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
             background-repeat:no-repeat;
-            background-attachment:fixed
+            background-attachment:fixed;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
         }
         img{
             width:50px;
@@ -49,25 +49,24 @@
             margin-top:30px;
             border-radius:20px;
             text-align: center;
-            background: rgba(0, 0, 0, 0.726);
+            background: rgba(0, 0, 0, 0.692);
             color:white;
             
         }
+       
     </style>
 
 </head>
 <body>
-    <div class="love">
-        
+    <div class="love">   
     </div>
-    <div class="express">
-            
+    <div class="express"> 
     </div>
         <script>
                 const arr=[3,4,8,9,13,14,15,16,18,19,20,21,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,46,47,48,49,50,51,52,53,54,58,59,60,61,62,63,64,70,71,72,73,74,82,83,84,94];
                 const ul=document.createElement("ul");
                 const express=document.getElementsByClassName('express')[0];
-                const content=['爱就像蓝天白云晴空万里忽然暴风雨','七夕快乐呀 么么哒','我想就这样牵着你的手不放开','少扣手！！！','再点小心心就没啦'];
+                const content=['爱就像蓝天白云晴空万里忽然暴风雨','七夕快乐呀 么么哒','没有口红没有包包没有小礼物','以后会有哒','少扣手！！！','再点小心心就没啦','再点小心心就没啦','再点小心心就没啦'];
                 for(let i=1;i<100;i++){
                     const li=document.createElement("li");
                     const img=document.createElement("img");
@@ -98,7 +97,10 @@
                     love[i].style.display="block"
                 }
                 }
-                asyncPrint(100);
+                setTimeout(() => {
+                    asyncPrint(100);
+                }, 2000);
+              
                 love.forEach(
                     (item)=>{
                         item.addEventListener('click',function(){
