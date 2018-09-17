@@ -1,16 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <form id="forms" action="">
-            <input type="text" name="number" value="John" placeholder="手机号"/><br />
-            <input type="password" name="password" placeholder="密码"/><br />
-            <button type="submit">提交</button>
-        </form>
-        <script>
-            let form=document.getElementById("forms");
-            form.elements[2].onsubmit=function(){
-                this.disabled='true'
-            }
-        </script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>吕晨阳的博客</title>
+    <style>
+      body,ul{
+        padding:0;
+        margin:0;
+      }
+      header ul{
+        list-style-type: none;
+        padding-right: 100px;
+        margin-top: 20px;
+        overflow: hidden;
+      }
+      header a{
+        text-decoration: none;
+        color:rgb(49, 49, 49);
+      }
+      .a2{
+        color:dodgerblue;
+      }
+      header li{
+        float:right;
+        margin: 0 20px;
+        padding-bottom: 10px;
+      }
+      header a:hover{
+          color:dodgerblue;
+      }
+      header li:nth-of-type(2){
+        border-bottom:dodgerblue solid;
+        color:dodgerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a class="a1" href="mood.html">晚间侃侃~</a></li>
+        <li><a class="a2" href="form.html">日常总结</a></li>
+        <li><a class="a3" href="index.html">首页</a></li>
+        <li class="underline"></li> 
+      </ul>
+    </header>
+
+  </body>
 </html>

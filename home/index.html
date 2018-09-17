@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>吕晨阳的博客</title>
+    <style>
+      body,ul{
+        padding:0;
+        margin:0;
+      }
+      a{
+        text-decoration: none;
+        color:rgb(49, 49, 49);
+      }
+      header ul{
+        list-style-type: none;
+        padding-right: 100px;
+        margin-top: 20px;
+        overflow: hidden;
+      }
+
+      .a3,header a:hover,header li:nth-of-type(3){
+        color:dodgerblue;
+      }
+      header li{
+        float:right;
+        margin: 0 20px;
+        padding-bottom: 10px;
+        
+      }
+      header li:nth-of-type(3){
+        border-bottom: dodgerblue solid;
+      }
+      .home-page{
+        width:90%;
+        margin:auto;
+        margin-top:50px;
+      }
+      .introduction{
+        float:left;
+        width:18%;
+      }
+      .introduction p{
+        text-align: center;
+      }
+      .content{
+        overflow: hidden;
+      }
+      .list{
+        display:none;
+      }
+      .introduction a:hover{
+        color:white;
+      }
+      .how{
+        position: relative;
+        height:300px;
+        border-radius: 10px;
+        background: linear-gradient(to right, dodgerblue , rgb(255, 38, 0));
+        margin:auto;
+        width:80%;
+      }
+      .title{
+        font-size:1.5em;
+        color:white;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        text-align: center;        
+      }
+      .title p{
+        white-space: nowrap
+      }
+      .name img{
+        width:60px;
+        height:60px;
+      }
+      .name p{
+        height:60px;
+        display:inline-block;
+        line-height: 60px;
+        margin:0;
+        overflow: hidden;
+      }
+      .name{
+        text-align: center;
+      }
+      .repository{
+        
+        display:block;
+        height:30px;
+        line-height: 30px;
+        border-radius: 7px;
+      }
+      .github{
+        background: lightblue;
+      }
+      .gitee{
+        background: lightcoral
+      }
+      .repository:hover{
+        box-shadow: 0 0 10px rgb(0, 212, 250);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <ul>
+          <li><a class="a1" href="mood.html">晚间侃侃~</a></li>
+          <li><a class="a2" href="form.html">日常总结</a></li>
+          <li><a class="a3" href="index.html">首页</a></li>
+      </ul>
+    </header>
+    
+    <div class="home-page">
+      <div class="introduction">
+        <div class="name">
+        <img title="我叫柯柯哦" src="../photo/corgi.png">
+        </div>
+        <p>一只喜欢产品的前端短腿基</p>
+        <p>永远相信美好的事情即将发生</p>
+        <p>产品理念：<br />功能突出、交互简单、有温度</p>
+        <p><a class="repository github">Github</a></p>
+        <p><a class="repository gitee" >码云</a></p>
+        <ul class="list">
+            <li><a href="https://mp.weixin.qq.com/s/MBM4S4L4M4FnpiKPwP4P2w" target="_blank">前端发展简史</a></li>
+            <li><a href="https://www.quanzhanketang.com/" target="_blank">W3schools</a></li>
+            <li><a href="http://es6.ruanyifeng.com/" target="_blank">ES6</a></li>
+            <li><a href="https://docs.npmjs.com/" target="_blank">npm文档</a></li>
+            <li><a href="https://webpack.js.org/" target="_blank">webpack英文文档</a></li>
+            <li><a href="https://www.webpackjs.com/concepts/" target="_blank">webpack中文文档</a></li>
+            <li><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank">廖雪峰的git教程</a></li>
+            <li><a href="https://git-scm.com/doc" target="_blank">git官方文档</a></li>
+            <li><a href="https://www.uisdc.com/" target="_blank">优设网</a></li>
+            <li><a href="http://www.woshipm.com/" target="_blank">人人都是产品经理</a></li>
+          </ul>
+      </div>
+      <div class="content">
+          <div class="how">
+            <div class="title">
+                <p>首页还不知道放些什么...需求来了自然就有了</p>
+            </div>
+          </div> 
+      </div>
+    </div>
+
+        <!-- <div class="center">
+          <h1>不想做产品经理的前端不是好设计师</h1>
+          <h2>我目前认知的前端体系</h2>
+          <p><span>HTML</span>语义化能很容易的读懂</p>
+          <p><span>CSS</span>还算是熟悉，每次写css都感觉自己像设计师</p>
+          <p><span>DOM</span>DOM操作</p>
+          <p><span>es6</span>更加完善了es5以后尽量用es6的特性</p>
+          <p><span>jquery</span>嘛？写原生代码比它都多，哈哈哈。不过jq真的超级方便。</p>
+          <p><span>webpack</span>是一个模块打包器，可以配置项让前端开发更容易。</p>
+          <p><span>vue</span>代表的是目前前端的先进模式MVVM模式,只关心数据层，不再直接操作dom。</p>
+          <p></p>
+        </div> -->
+      <script>
+ /*        const a={
+          name:'chen',
+          arr:[
+            {
+              age:23
+            }
+          ],
+          h:{
+            name1:'2',
+            age:234
+          }
+        }
+        let b={};
+        //深复制
+        function copy(obj1,obj2){
+          obj2=obj2||{};
+          for (let i in obj1){
+            if(typeof obj1[i]=='object'){
+              obj2[i]=obj1[i] instanceof Array ? [] : {};
+              copy(obj1[i],obj2[i]);
+            }else{
+              obj2[i]=obj1[i];
+            }
+          }
+          return obj2;
+        }
+        
+        console.log(copy(a,b)); */ 
+        let name;
+        name=name;
+        console.log(name);
+      </script>
+  </body>
+</html>
