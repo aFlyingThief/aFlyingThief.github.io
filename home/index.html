@@ -8,34 +8,33 @@
         padding:0;
         margin:0;
       }
+      .home-page{
+        width:90%;
+        margin:auto;
+      }
       a{
         text-decoration: none;
         color:rgb(49, 49, 49);
       }
+      /* 这里是导航  */
       header ul{
         list-style-type: none;
-        padding-right: 100px;
         margin-top: 20px;
         overflow: hidden;
       }
-
       .a3,header a:hover,header li:nth-of-type(3){
         color:dodgerblue;
       }
       header li{
         float:right;
-        margin: 0 20px;
+        margin-left:30px;
         padding-bottom: 10px;
         
       }
-      header li:nth-of-type(3){
+      header li:nth-of-type(4){
         border-bottom: dodgerblue solid;
       }
-      .home-page{
-        width:90%;
-        margin:auto;
-        margin-top:50px;
-      }
+      /*  */
       .introduction{
         float:left;
         width:18%;
@@ -87,7 +86,6 @@
         text-align: center;
       }
       .repository{
-        
         display:block;
         height:30px;
         line-height: 30px;
@@ -102,25 +100,36 @@
       .repository:hover{
         box-shadow: 0 0 10px rgb(0, 212, 250);
       }
+      .insert{
+        padding:5px;
+        background: #f1f1f1;
+      }
+      .insert span:first-child{
+        text-shadow: 2px 2px  rgb(49, 49, 49);
+        font-size:2em;
+        color:red;
+      }
     </style>
   </head>
   <body>
-    <header>
-      <ul>
-          <li><a class="a1" href="mood.html">晚间侃侃~</a></li>
-          <li><a class="a2" href="form.html">日常总结</a></li>
-          <li><a class="a3" href="index.html">首页</a></li>
-      </ul>
-    </header>
-    
     <div class="home-page">
-      <div class="introduction">
+      <header>
+        <ul>
+            <li><a class="a1" href="font.html">前端必备</a></li>
+            <li><a class="a1" href="mood.html">晚间侃侃~</a></li>
+            <li><a class="a2" href="summary.html">日常总结</a></li>
+            <li><a class="a3" href="index.html">首页</a></li>
+        </ul>
+      </header>
+      <div class="insert">
+        <span>想法</span>
+        <span>最近感觉互联网企业想靠一款软件活很久是不可能的，随时都有可能死掉。</span>
+      </div>
+     <!--  <div class="introduction">
         <div class="name">
         <img title="我叫柯柯哦" src="../photo/corgi.png">
         </div>
-        <p>一只喜欢产品的前端短腿基</p>
         <p>永远相信美好的事情即将发生</p>
-        <p>产品理念：<br />功能突出、交互简单、有温度</p>
         <p><a class="repository github">Github</a></p>
         <p><a class="repository gitee" >码云</a></p>
         <ul class="list">
@@ -135,28 +144,8 @@
             <li><a href="https://www.uisdc.com/" target="_blank">优设网</a></li>
             <li><a href="http://www.woshipm.com/" target="_blank">人人都是产品经理</a></li>
           </ul>
-      </div>
-      <div class="content">
-          <div class="how">
-            <div class="title">
-                <p>首页还不知道放些什么...需求来了自然就有了</p>
-            </div>
-          </div> 
-      </div>
+      </div> -->
     </div>
-
-        <!-- <div class="center">
-          <h1>不想做产品经理的前端不是好设计师</h1>
-          <h2>我目前认知的前端体系</h2>
-          <p><span>HTML</span>语义化能很容易的读懂</p>
-          <p><span>CSS</span>还算是熟悉，每次写css都感觉自己像设计师</p>
-          <p><span>DOM</span>DOM操作</p>
-          <p><span>es6</span>更加完善了es5以后尽量用es6的特性</p>
-          <p><span>jquery</span>嘛？写原生代码比它都多，哈哈哈。不过jq真的超级方便。</p>
-          <p><span>webpack</span>是一个模块打包器，可以配置项让前端开发更容易。</p>
-          <p><span>vue</span>代表的是目前前端的先进模式MVVM模式,只关心数据层，不再直接操作dom。</p>
-          <p></p>
-        </div> -->
       <script>
  /*        const a={
           name:'chen',
@@ -186,9 +175,6 @@
         }
         
         console.log(copy(a,b)); */ 
-        let name;
-        name=name;
-        console.log(name);
       </script>
   </body>
 </html>
