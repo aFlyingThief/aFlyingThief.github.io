@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <style>
+      body,ul{
+        padding:0;
+        margin:0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      ul{
+        list-style-type:none;
+      }
+      a{
+        text-decoration: none;
+      }
+      header{
+        background:#0d0d0d;
+        color:white;
+        height:70px;
+        line-height: 70px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      nav li{
+        display:inline-block;
+        margin:0 10px;
+      }
+      .displays{
+        width:80%;
+        margin:auto;
+      }
+      aside{
+        width:30%;
+        float:left;
+      }
+      main{
+        overflow: hidden;
+      }
+      .information{
+        width:70%;
+      }
+      .information img{
+        width:100%;
+      }
+      .information li{
+        margin:10px 0;
+        color:gray;
+      }
+      .information a{
+        color:#404040;
+      }
+      .information li:first-child{
+        color:#404040;
+        font-size:1.2em;
+        display:flex;
+        align-items: center;
+      }
+      .information button{
+        width:100%;
+        height:35px;
+        border: none;
+        outline:none
+      }
+      .information button:hover{
+        background: #0d0d0d;
+        color:white;
+      }
+      .github{
+        width:25px;
+      }
+    </style>
+  </head>
+  <body>   
+      <header>
+        <nav>
+          <ul>
+            <li><a>HTML</a></li>
+            <li><a>CSS</a></li>
+            <li><a>JAVASCRIPT</a></li>
+            <li><a>TOOLS</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="displays">
+        <aside>
+          <div class="information">
+            <img src="./photo/cat.jpg"/>
+            <ul>
+              <li><span>会飞的贼</span><span style="margin:0 10px">|</span><object class="github" data="github.svg" type="image/svg+xml"></object><a href="https://github.com/aFlyingThief">github</a></li>
+              <li>Stay focused and believe in the power of accumulation.</li>
+              <li><button>编辑</button></li>
+            </ul>
+              <form style="display:none" action="action_page.php">
+                  <textarea name="message" rows="8" cols="25">Stay focused and believe in the power of accumulation.</textarea>
+                  <br>
+                  <input type="submit">
+              </form>
+          </div>
+
+        </aside>
+        <main>
+          <div>动态</div>
+          <p>不了解后端自己写前端页面一点不过瘾，等我学学node.js建个动态网站练练手。</p>
+
+        </main>
+      </div>
+      <script>
+        const button=document.querySelector('button');
+        const ul=document.querySelectorAll('ul')[1];
+        const form=document.querySelector('form');
+        button.onclick=function(){
+          ul.style.display='none';
+          form.style.display='block';
+        }
+      </script>
+      <script>
+ /*        const a={
+          name:'chen',
+          arr:[
+            {
+              age:23
+            }
+          ],
+          h:{
+            name1:'2',
+            age:234
+          }
+        }
+        let b={};
+        //深复制
+        function copy(obj1,obj2){
+          obj2=obj2||{};
+          for (let i in obj1){
+            if(typeof obj1[i]=='object'){
+              obj2[i]=obj1[i] instanceof Array ? [] : {};
+              copy(obj1[i],obj2[i]);
+            }else{
+              obj2[i]=obj1[i];
+            }
+          }
+          return obj2;
+        }
+        
+        console.log(copy(a,b)); */ 
+      </script>
+  </body>
+</html>
